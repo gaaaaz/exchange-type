@@ -5,12 +5,13 @@ import com.exchange.type.model.exchange.ExchangeTypeResponse;
 import com.exchange.type.service.ExchangeTypeService;
 import com.exchange.type.util.Currency;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
 
 @Service
 public class ExchangeTypeServiceImpl implements ExchangeTypeService {
 
     @Override
-    public ExchangeTypeResponse exchangeOriginToDestinationCurrency(ExchangeTypeRequest request) {
+    public Mono<ExchangeTypeResponse> exchangeOriginToDestinationCurrency(ExchangeTypeRequest request) {
 
         String currencyExchange = request.getOriginCurrency() + request.getDestinationCurrency();
         Double exchangeType = Currency.valueOf(currencyExchange).getValue();
@@ -26,6 +27,6 @@ public class ExchangeTypeServiceImpl implements ExchangeTypeService {
                 .exchangeType(exchangeType)
                 .build();
 
-        return response;
+        return Mono.just(response);
     }
 }

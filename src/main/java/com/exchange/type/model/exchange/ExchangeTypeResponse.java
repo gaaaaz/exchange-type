@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 public class ExchangeTypeResponse {
 
     private Double amount;
-    private Double amountExchange;
     private String originCurrency;
+    private Double amountExchange;
     private String destinationCurrency;
-    private Double exchangeType; //El valor unitario
+    private Double exchangeType;
 
 }
