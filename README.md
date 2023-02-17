@@ -20,9 +20,9 @@ Mira **Ejecución** para conocer como ejecutar el proyecto.
 
 _1. El proyecto contiene un Dockerfile que permitirá ejecutar el proyecto directamente en un contenedor de docker. Para ello, ejecutar el comando 
 "docker build -t nombre_imagen .", reemplazando nombre_imagen por el nombre a tu gusto. Es recomendable ejecutar este comando desde CMD y directamente en la ruta
-donde se encuentra el archivo.
+donde se encuentra el archivo._
 
-2. Para levantar el contenedor de docker ejecutamos "docker-compose up -d"_, desde la ruta donde se encuentra el archivo docker-compose.yml, que está en la carpeta
+_2. Para levantar el contenedor de docker ejecutamos "docker-compose up -d"_, desde la ruta donde se encuentra el archivo docker-compose.yml, que está en la carpeta
 src/main/resources._
 
 ## Construido con 🛠️
