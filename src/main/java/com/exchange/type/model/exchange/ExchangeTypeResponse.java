@@ -16,5 +16,6 @@ public class ExchangeTypeResponse {
     private Double amountExchange;
     private String destinationCurrency;
     private Double exchangeType;
+    private Double discountRate;
 
 }
